@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f8ff;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 450px;
+}
+
+.container a:nth-child(1) {
+    padding: 15px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #AB68C2;
+    color: #fff;
+}
+
+.container a:nth-child(2) {
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #AB68C2;
+    color: #fff;
+}
+
+.face_one {
+    width: 300px;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    height: 310px;
+    border-radius: 50%;
+    background-color: #AB68C2;
+}
+
+.face_one:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    background-color: #AB68C2;
+    height: 115px;
+    top: 27%;
+    left: 85%;
+    border-radius: 50%;
+}
+
+.face_two {
+    width: 298px;
+    position: absolute;
+    top: 15%;
+    left: 16%;
+    height: 310px;
+    border-radius: 50%;
+    background-color: #DF9EF4;
+}
+
+.face_two:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 115px;
+    top: 28%;
+    left: -12%;
+    border-radius: 50%;
+    background-color: #DF9EF4;
+}
+
+.left_eye {
+    animation: left .4s linear 2s 2;
+    position: absolute;
+    width: 80px;
+    height: 85px;
+    top: 30%;
+    left: 28%;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: rotate(-30deg);
+    background-color: #fff;
+}
+
+.left_eye:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: left .4s linear 2s 2;
+    transition: 0.5s;
+    background-color: #1A3F89;
+    top: 32%;
+    left: 8%;
+}
+
+.right_eye {
+    position: absolute;
+    width: 80px;
+    height: 85px;
+    transform: rotate(40deg);
+    top: 30%;
+    left: 48%;
+    animation: right .4s linear 2s 2;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.right_eye:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: right .4s linear 2s 2;
+    background-color: #1A3F89;
+    top: 32%;
+    left: 18%;
+}
+
+.mouth {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    background-color: #1A3F89;
+    width: 45px;
+    border-radius: 25px;
+    outline: hidden;
+    height: 25px;
+    animation: effect .4s linear 3s 3 alternate;
+    animation-direction: alternate;
+}
+
+.mouth:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    left: 10px;
+    top: 0px;
+    border-radius: 4px 0 3px 3px;
+    background-color: #fff;
+
+}
+
+.mouth:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 58%;
+    background-color: #1A3F89;
+    width: 35px;
+    animation: effect 0.4s linear 3s 3 alternate;
+    height: 25px;
+    border-radius: 60px;
+    transform: rotate(-17deg);
+}
+
+.hair {
+    position: absolute;
+    width: 2.5px;
+    height: 70px;
+    top: 1%;
+    left: 40%;
+    transform: rotate(-205deg);
+    border-radius: 0 300px 0 120px;
+    background-color: #1A3f84;
+}
+
+.hair:before {
+    content: "";
+    position: absolute;
+    width: 2.6px;
+    height: 70px;
+    left: -20px;
+    top: -9%;
+    transform: rotate(-165deg);
+    z-index: 5;
+    background-color: #1A3f84;
+}
+
+.hair:after {
+    content: "";
+    position: absolute;
+    width: 2.5px;
+    height: 70px;
+    left: -45px;
+    top: -20px;
+    transform: rotate(40deg);
+    background: #1A3f84;
+}
+
+@keyframes left {
+    0%,
+    50% {
+        background: transparent;
+    }
+    100% {
+        /* background: #AB68C2  ; */
+    }
+}
+
+@keyframes right {
+    0%,
+    50% {
+        background: transparent;
+    }
+    100% {}
+}
+
+@keyframes effect {
+    0% {
+        width: 40px;
+        height: 25px;
+    }
+    50% {
+        width: 50px;
+        height: 35px;
+    }
+    100% {
+        width: 50px;
+        height: 25px;
+    }
+}
